@@ -1,2 +1,8 @@
-# CPUx128
-SystemC CPU with 128 bits, easil
+# ASCMx128
+system platform
+
+# Alschemy
+assembly language
+
+# AlschemyOS
+operating system
