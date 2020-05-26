@@ -5,29 +5,63 @@
 !_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
 !_TAG_PROGRAM_URL	https://ctags.io/	/official site/
 !_TAG_PROGRAM_VERSION	0.0.0	//
-$(NAME)	Makefile	/^$(NAME): 		$(OBJS)$/;"	t
-%.o	Makefile	/^%.o: 			%.hpp ASCMx128.h$/;"	t
-CFLAGS	Makefile	/^CFLAGS			= -I$(INCLUDE_DIR) -Weverything -lsystemc$/;"	m
-CPUx128	ASCMx128.h	/^# define CPUx128$/;"	d
-CPUx128	README.md	/^# CPUx128$/;"	c
-GXX	Makefile	/^GXX             = g++$/;"	m
-INCLUDE_DIR	Makefile	/^INCLUDE_DIR		= .\/$/;"	m
-MAIN	Makefile	/^MAIN			= sc_main.cpp$/;"	m
-NAME	Makefile	/^NAME			= ASCMx128$/;"	m
-OBJS	Makefile	/^OBJS			= $(SRCS:.cpp=.o)$/;"	m
-RM	Makefile	/^RM				= rm -rf$/;"	m
-SC_MODULE	ASCMx128.h	/^SC_MODULE           (half_adder) $/;"	f
-SESSION_FILE	Makefile	/^SESSION_FILE    = $(NAME).vim$/;"	m
-SRCS	Makefile	/^SRCS 			= $(shell ls -r sources\/*.hpp)$/;"	m
-SessionLoad	ASCMx128.vim	/^let SessionLoad = 1$/;"	v
-build	sc_main.cpp	/^# define build /;"	d	file:
+$(NAME)	Makefile	/^$(NAME): 			$(OBJS)$/;"	t
+%.o	Makefile	/^%.o: 				%.hpp $(INCLUDE_MAIN)$/;"	t
+ASCMx128	README.md	/^# ASCMx128$/;"	c
+ASCMx128	includes/ASCMx128.h	/^# define ASCMx128$/;"	d
+ASCMx128	includes/ASCMx128.hpp	/^# define ASCMx128$/;"	d
+Alschemy	README.md	/^# Alschemy$/;"	c
+AlschemyOS	README.md	/^# AlschemyOS$/;"	c
+BUILD	includes/ASCMx128.hpp	/^#  define BUILD /;"	d
+BUILD_DATE	Makefile	/^BUILD_DATE			= $(shell stat -f "%Sm" -t "%Y-%m-%d %H:%M" $(BUILD_NUMBER))$/;"	m
+BUILD_DATE	includes/ASCMx128.hpp	/^#  define BUILD_DATE /;"	d
+BUILD_NUMBER	Makefile	/^BUILD_NUMBER		= .build_number$/;"	m
+CFLAGS	Makefile	/^CFLAGS				= -D NAME="\\"$(NAME)\\"" -D VERSION="\\"$(CURRENT_VERSION)\\"" -D BUILD="\\"$(CURRENT/;"	m
+CURRENT_BUILD	Makefile	/^CURRENT_BUILD		= $(shell cat $(BUILD_NUMBER))$/;"	m
+CURRENT_VERSION	Makefile	/^CURRENT_VERSION		= $(shell cat $(VERSION_NUMBER))$/;"	m
+DESC	Makefile	/^DESC				= $/;"	m
+DESC	includes/ASCMx128.hpp	/^#  define DESC /;"	d
+GXX	Makefile	/^GXX             	= g++$/;"	m
+INCLUDES	Makefile	/^INCLUDES			= -I.\/includes -I.\/sources$/;"	m
+INCLUDE_MAIN	Makefile	/^INCLUDE_MAIN		= .\/includes\/$(NAME).hpp$/;"	m
+MAIN	Makefile	/^MAIN				= sources\/sc_main.cpp$/;"	m
+MAIN_TEST	Makefile	/^MAIN_TEST			= sources\/sc_test.cpp$/;"	m
+NAME	Makefile	/^NAME				= ASCMx128$/;"	m
+NAME	includes/ASCMx128.hpp	/^#  define NAME /;"	d
+OBJS	Makefile	/^OBJS				= $(SRCS:.cpp=.o)$/;"	m
+RM	Makefile	/^RM					= rm -rf$/;"	m
+SC_MODULE	sources/ALU/adder_half.hpp	/^SC_MODULE               (sc_half_adder)$/;"	f
+SESSION_FILE	Makefile	/^SESSION_FILE    	= Session.vim$/;"	m
+SRCS	Makefile	/^SRCS 				= $(shell ls -r sources\/*\/*.hpp)$/;"	m
+SessionLoad	Session.vim	/^let SessionLoad = 1$/;"	v
+TEST	Makefile	/^TEST				= ASCMx128-test$/;"	m
+VERSION	includes/ASCMx128.hpp	/^#  define VERSION /;"	d
+VERSIONSTR	includes/ASCMx128.hpp	/^# define VERSIONSTR /;"	d
+VERSION_NUMBER	Makefile	/^VERSION_NUMBER		= .version_number$/;"	m
+VSTR	includes/ASCMx128.h	/^#define VSTR /;"	d
+all	Makefile	/^all: 				$(NAME)$/;"	t
 clean	Makefile	/^clean:$/;"	t
-fclean	Makefile	/^fclean:			clean$/;"	t
-main	sc_main.cpp	/^int main()$/;"	f	typeref:typename:int
-prc_half_adder	sc_main.cpp	/^void half_adder :: prc_half_adder() { $/;"	f	class:half_adder	typeref:typename:void
-re	Makefile	/^re: clean fclean $($NAME)                                                                     $/;"	t
-s:l	ASCMx128.vim	/^let s:l = 1 - ((0 * winheight(0) + 50) \/ 101)$/;"	v
-s:so_save	ASCMx128.vim	/^let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0$/;"	v
-s:sx	ASCMx128.vim	/^let s:sx = expand("<sfile>:p:r")."x.vim"$/;"	v
-s:wipebuf	ASCMx128.vim	/^  let s:wipebuf = bufnr('%')$/;"	v
+ctest	Makefile	/^ctest:				$(OBJS)$/;"	t
+fclean	Makefile	/^fclean:				clean$/;"	t
+g	sources/sc_test.cpp	/^# define g(/;"	d	file:
+main	sources/sc_main.cpp	/^int         main()$/;"	f	typeref:typename:int
+main	sources/sc_test.cpp	/^int     main()$/;"	f	typeref:typename:int
+new_build	Makefile	/^new_build:			$(SRCS) $(INCLUDE_MAIN)$/;"	t
+new_version	Makefile	/^new_version:$/;"	t
+push	Makefile	/^push:				new_build$/;"	t
+re	Makefile	/^re: clean fclean all                                                                    $/;"	t
+reset_build	Makefile	/^reset_build:$/;"	t
+reset_version	Makefile	/^reset_version:$/;"	t
+run	Makefile	/^run: 				$(NAME)$/;"	t
+s	sources/sc_test.cpp	/^# define s(/;"	d	file:
+s:l	Session.vim	/^let s:l = 18 - ((14 * winheight(0) + 25) \/ 50)$/;"	v
+s:l	Session.vim	/^let s:l = 198 - ((12 * winheight(0) + 25) \/ 50)$/;"	v
+s:l	Session.vim	/^let s:l = 28 - ((0 * winheight(0) + 25) \/ 50)$/;"	v
+s:l	Session.vim	/^let s:l = 35 - ((0 * winheight(0) + 50) \/ 101)$/;"	v
+s:so_save	Session.vim	/^let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0$/;"	v
+s:sx	Session.vim	/^let s:sx = expand("<sfile>:p:r")."x.vim"$/;"	v
+s:wipebuf	Session.vim	/^  let s:wipebuf = bufnr('%')$/;"	v
+sc_main	sc_test.cpp	/^int sc_main()$/;"	f	typeref:typename:int
+test	Makefile	/^test:				ctest$/;"	t
+test_half_adder	sources/ALU/adder_half.hpp	/^bool                    test_half_adder()$/;"	f	typeref:typename:bool
 vi	Makefile	/^vi:$/;"	t
