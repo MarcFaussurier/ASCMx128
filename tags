@@ -8,168 +8,26 @@
 $(NAME)	Makefile	/^$(NAME): 		$(OBJS)$/;"	t
 %.o	Makefile	/^%.o: 			%.hpp ASCMx128.h$/;"	t
 CFLAGS	Makefile	/^CFLAGS			= -I$(INCLUDE_DIR) -Weverything -lsystemc$/;"	m
-CPUx128	CPUx128.h	/^# define CPUx128$/;"	d
+CPUx128	ASCMx128.h	/^# define CPUx128$/;"	d
 CPUx128	README.md	/^# CPUx128$/;"	c
 GXX	Makefile	/^GXX             = g++$/;"	m
-HUMAN_SPEED_X	systemc/navigation/environment.h	/^const double HUMAN_SPEED_X = 0.005;$/;"	v	typeref:typename:const double
-HUMAN_SPEED_Y	systemc/navigation/environment.h	/^const double HUMAN_SPEED_Y = 0.005;$/;"	v	typeref:typename:const double
-IMAGE_AMOUNT	systemc/gaze/constants.h	/^const int IMAGE_AMOUNT = 50;$/;"	v	typeref:typename:const int
-IMAGE_SIZE_X	systemc/gaze/constants.h	/^const int IMAGE_SIZE_X = 1024;$/;"	v	typeref:typename:const int
-IMAGE_SIZE_Y	systemc/gaze/constants.h	/^const int IMAGE_SIZE_Y = 1024;$/;"	v	typeref:typename:const int
 INCLUDE_DIR	Makefile	/^INCLUDE_DIR		= .\/$/;"	m
 MAIN	Makefile	/^MAIN			= sc_main.cpp$/;"	m
-MAX_GAZE_PACKET_AMT	systemc/gaze/constants.h	/^const int MAX_GAZE_PACKET_AMT = 30;$/;"	v	typeref:typename:const int
-MAX_GAZE_PACKET_SIZE	systemc/gaze/constants.h	/^const int MAX_GAZE_PACKET_SIZE = 30;$/;"	v	typeref:typename:const int
-MAX_SPEED_X	systemc/navigation/environment.h	/^const double MAX_SPEED_X = 0.002;$/;"	v	typeref:typename:const double
-MAX_SPEED_Y	systemc/navigation/environment.h	/^const double MAX_SPEED_Y = 0.002;$/;"	v	typeref:typename:const double
-MEM_SIZE_DM	systemc/cpu/dm.h	/^const int MEM_SIZE_DM = 256;$/;"	v	typeref:typename:const int
-MEM_SIZE_PM	systemc/cpu/pm.h	/^const int MEM_SIZE_PM = 256;$/;"	v	typeref:typename:const int
-MEM_SIZE_RF	systemc/cpu/rf.h	/^const int MEM_SIZE_RF = 256;$/;"	v	typeref:typename:const int
-MIN_GAZE_PACKET_SIZE	systemc/gaze/constants.h	/^const int MIN_GAZE_PACKET_SIZE = 20;$/;"	v	typeref:typename:const int
 NAME	Makefile	/^NAME			= ASCMx128$/;"	m
-NUM_HUMANS	systemc/navigation/environment.h	/^const int NUM_HUMANS = 6;$/;"	v	typeref:typename:const int
-NUM_ROBOTS	systemc/navigation/environment.h	/^const int NUM_ROBOTS = 4;$/;"	v	typeref:typename:const int
-NUM_ROWS	systemc/navigation/environment.h	/^const int NUM_ROWS = 3;$/;"	v	typeref:typename:const int
 OBJS	Makefile	/^OBJS			= $(SRCS:.cpp=.o)$/;"	m
-PACKETS_PER_IMAGE	systemc/gaze/constants.h	/^const int PACKETS_PER_IMAGE = 5;$/;"	v	typeref:typename:const int
-PACKET_ARRAY_LENGTH	systemc/gaze/constants.h	/^const int PACKET_ARRAY_LENGTH = 4;$/;"	v	typeref:typename:const int
 RM	Makefile	/^RM				= rm -rf$/;"	m
-SC_MODULE	CPUx128.h	/^SC_MODULE           (half_adder) $/;"	f
-SC_MODULE	systemc/adder/driver.h	/^SC_MODULE (driver) {$/;"	f
-SC_MODULE	systemc/adder/full_adder.h	/^SC_MODULE (full_adder) {$/;"	f
-SC_MODULE	systemc/adder/half_adder.h	/^SC_MODULE (half_adder) {$/;"	f
-SC_MODULE	systemc/adder/monitor.h	/^SC_MODULE (monitor) {$/;"	f
-SC_MODULE	systemc/communications/driver.h	/^SC_MODULE (driver) {$/;"	f
-SC_MODULE	systemc/communications/packet_receiver.h	/^SC_MODULE(packet_receiver) {$/;"	f
-SC_MODULE	systemc/cpu/alu.h	/^SC_MODULE(alu) {$/;"	f
-SC_MODULE	systemc/cpu/controller.h	/^SC_MODULE(controller) {$/;"	f
-SC_MODULE	systemc/cpu/dm.h	/^SC_MODULE(data_memory) {$/;"	f
-SC_MODULE	systemc/cpu/pm.h	/^SC_MODULE(program_memory) {$/;"	f
-SC_MODULE	systemc/cpu/rf.h	/^SC_MODULE(register_file) {$/;"	f
-SC_MODULE	systemc/gaze/mobile.h	/^SC_MODULE (mobile) {$/;"	f
-SC_MODULE	systemc/gaze/server.h	/^SC_MODULE (server) {$/;"	f
-SC_MODULE	systemc/misc/hello_world/hello.cpp	/^SC_MODULE (hello_world) {$/;"	f
-SC_MODULE	systemc/navigation/environment.h	/^SC_MODULE(environment) {$/;"	f
-SC_MODULE	systemc/navigation/robot.h	/^SC_MODULE (robot) {$/;"	f
-SC_MODULE	systemc/navigation/server.h	/^SC_MODULE (server) {$/;"	f
-SC_MODULE	systemc/seq_det/driver.h	/^SC_MODULE (driver) {$/;"	f
-SC_MODULE	systemc/seq_det/sdet.h	/^SC_MODULE(sdet) {$/;"	f
-SC_MODULE	systemc/two_counters/counter1.h	/^SC_MODULE(counter1) {$/;"	f
-SC_MODULE	systemc/two_counters/counter2.h	/^SC_MODULE(counter2) {$/;"	f
-SC_MODULE	systemc/two_counters/driver.h	/^SC_MODULE(driver) {$/;"	f
-SC_MODULE	systemc/two_counters/ended_determiner.h	/^SC_MODULE(ended_determiner) {$/;"	f
+SC_MODULE	ASCMx128.h	/^SC_MODULE           (half_adder) $/;"	f
+SESSION_FILE	Makefile	/^SESSION_FILE    = $(NAME).vim$/;"	m
 SRCS	Makefile	/^SRCS 			= $(shell ls -r sources\/*.hpp)$/;"	m
-adder	systemc/README.md	/^## adder$/;"	s
+SessionLoad	ASCMx128.vim	/^let SessionLoad = 1$/;"	v
 build	sc_main.cpp	/^# define build /;"	d	file:
 clean	Makefile	/^clean:$/;"	t
-communications	systemc/README.md	/^## communications$/;"	s
-cpu	systemc/README.md	/^## cpu$/;"	s
-current_grid	systemc/navigation/environment.cpp	/^int environment :: current_grid[NUM_ROBOTS] = {};$/;"	m	class:environment 	typeref:typename:int[]
-distance	systemc/navigation/helper.cpp	/^double distance(double x1, double y1, double x2, double y2) {$/;"	f	typeref:typename:double
-distance	systemc/navigation/helper.cpp	/^double distance(int x1, int y1, int x2, int y2) {$/;"	f	typeref:typename:double
-ev_env	systemc/navigation/server.cpp	/^sc_event server :: ev_env;$/;"	m	class:server 	typeref:typename:sc_event
-ev_image_to_mobile	systemc/gaze/mobile.cpp	/^sc_event mobile :: ev_image_to_mobile; \/\/indicates an image was sent to a mobile$/;"	m	class:mobile 	typeref:typename:sc_event
-ev_network_request	systemc/gaze/server.cpp	/^sc_event server :: ev_network_request;$/;"	m	class:server 	typeref:typename:sc_event
-ev_receive	systemc/gaze/server.cpp	/^sc_event server :: ev_receive;$/;"	m	class:server 	typeref:typename:sc_event
-ev_transmit	systemc/gaze/server.cpp	/^sc_event server :: ev_transmit;$/;"	m	class:server 	typeref:typename:sc_event
 fclean	Makefile	/^fclean:			clean$/;"	t
-frame	systemc/gaze/mobile.cpp	/^int mobile :: frame = 0;$/;"	m	class:mobile 	typeref:typename:int
-free	systemc/gaze/server.cpp	/^bool server :: free = true;$/;"	m	class:server 	typeref:typename:bool
-gaze_point	systemc/gaze/mobile.cpp	/^int mobile :: gaze_point[2] = {((IMAGE_SIZE_X \/ 2) - 1),$/;"	m	class:mobile 	typeref:typename:int[2]
-get_center_x	systemc/navigation/helper.cpp	/^double get_center_x(double x1, double y1, double x2, double y2) {$/;"	f	typeref:typename:double
-get_center_x	systemc/navigation/helper.cpp	/^double get_center_x(int x1, int y1, int x2, int y2) {$/;"	f	typeref:typename:double
-get_center_y	systemc/navigation/helper.cpp	/^double get_center_y(double x1, double y1, double x2, double y2) {$/;"	f	typeref:typename:double
-get_center_y	systemc/navigation/helper.cpp	/^double get_center_y(int x1, int y1, int x2, int y2) {$/;"	f	typeref:typename:double
-get_current_grid_human	systemc/navigation/environment.cpp	/^int environment :: get_current_grid_human(int human_index) {$/;"	f	class:environment	typeref:typename:int
-get_current_grid_robot	systemc/navigation/server.cpp	/^int server :: get_current_grid_robot(int robot_index) {$/;"	f	class:server	typeref:typename:int
-get_current_node_robot	systemc/navigation/server.cpp	/^int server :: get_current_node_robot(int robot_index) {$/;"	f	class:server	typeref:typename:int
-get_expected_arrival_time_node	systemc/navigation/server.cpp	/^int server :: get_expected_arrival_time_node(int node_index, int robot_index) {$/;"	f	class:server	typeref:typename:int
-get_next_grid_human	systemc/navigation/environment.cpp	/^int environment :: get_next_grid_human(int human_index, int current_grid) {$/;"	f	class:environment	typeref:typename:int
-get_next_grid_robot	systemc/navigation/server.cpp	/^int server :: get_next_grid_robot(int robot_index) {$/;"	f	class:server	typeref:typename:int
-get_next_node_robot	systemc/navigation/server.cpp	/^int server :: get_next_node_robot(int robot_index) {$/;"	f	class:server	typeref:typename:int
-get_robot_status	systemc/navigation/server.cpp	/^int server :: get_robot_status(int robot_index) {$/;"	f	class:server	typeref:typename:int
-get_x_center_of_grid	systemc/navigation/environment.cpp	/^double environment :: get_x_center_of_grid(int grid_index) {$/;"	f	class:environment	typeref:typename:double
-get_y_center_of_grid	systemc/navigation/environment.cpp	/^double environment :: get_y_center_of_grid(int grid_index) {$/;"	f	class:environment	typeref:typename:double
-grid	systemc/navigation/environment.cpp	/^int environment :: grid[60][60] =$/;"	m	class:environment 	typeref:typename:int[60][60]
-grid_list_data	systemc/navigation/server.cpp	/^int server :: grid_list_data[50][50] =$/;"	m	class:server 	typeref:typename:int[50][50]
-human_grid_list_data	systemc/navigation/environment.cpp	/^int environment :: human_grid_list_data[50][50] =$/;"	m	class:environment 	typeref:typename:int[50][50]
-human_grids	systemc/navigation/environment.cpp	/^int environment :: human_grids[NUM_HUMANS] = {1, 13, 18, 26, 32, 39}; \/\/human start grids$/;"	m	class:environment 	typeref:typename:int[]
-humanx	systemc/navigation/environment.cpp	/^double environment :: humanx[NUM_HUMANS] = {};$/;"	m	class:environment 	typeref:typename:double[]
-humany	systemc/navigation/environment.cpp	/^double environment :: humany[NUM_HUMANS] = {};$/;"	m	class:environment 	typeref:typename:double[]
-image_set	systemc/gaze/server.cpp	/^int server :: image_set[PACKETS_PER_IMAGE * IMAGE_AMOUNT][PACKET_ARRAY_LENGTH] =$/;"	m	class:server 	typeref:typename:int[][]
-image_size	systemc/gaze/server.cpp	/^int server :: image_size[2] = {IMAGE_SIZE_X, IMAGE_SIZE_Y}; \/\/xsize, ysize$/;"	m	class:server 	typeref:typename:int[2]
-initPrint	systemc/cpu/dm.cpp	/^void data_memory :: initPrint() {$/;"	f	class:data_memory	typeref:typename:void
-is_free	systemc/gaze/server.cpp	/^bool server :: is_free() {$/;"	f	class:server	typeref:typename:bool
-is_grid_occupied	systemc/navigation/server.cpp	/^bool server :: is_grid_occupied(int grid_index)$/;"	f	class:server	typeref:typename:bool
-m0_display_image_buffer	systemc/gaze/mobile.cpp	/^int mobile :: m0_display_image_buffer[(PACKETS_PER_IMAGE * IMAGE_AMOUNT)][PACKET_ARRAY_LENGTH] =/;"	m	class:mobile 	typeref:typename:int[][]
-m0_image_packet_index	systemc/gaze/mobile.cpp	/^int mobile :: m0_image_packet_index = 5; \/\/fills up over time; displayed image (0-4)$/;"	m	class:mobile 	typeref:typename:int
-m0_packet	systemc/gaze/mobile.cpp	/^int mobile :: m0_packet[MAX_GAZE_PACKET_SIZE][3] = {0};$/;"	m	class:mobile 	typeref:typename:int[][3]
-m0_packet_to_image_counter	systemc/gaze/mobile.cpp	/^int mobile :: m0_packet_to_image_counter = 0;$/;"	m	class:mobile 	typeref:typename:int
-m1_display_image_buffer	systemc/gaze/mobile.cpp	/^int mobile :: m1_display_image_buffer[(PACKETS_PER_IMAGE * IMAGE_AMOUNT)][PACKET_ARRAY_LENGTH] =/;"	m	class:mobile 	typeref:typename:int[][]
-m1_image_packet_index	systemc/gaze/mobile.cpp	/^int mobile :: m1_image_packet_index = 5; \/\/is not directly written to, but shifted in$/;"	m	class:mobile 	typeref:typename:int
 main	sc_main.cpp	/^int main()$/;"	f	typeref:typename:int
-message	systemc/navigation/server.cpp	/^int server :: message = 0;$/;"	m	class:server 	typeref:typename:int
-message_received	systemc/navigation/environment.cpp	/^int environment :: message_received = 0; \/\/0 = none received , 1 = ack received$/;"	m	class:environment 	typeref:typename:int
-message_robot_index	systemc/navigation/server.cpp	/^int server :: message_robot_index = 0;$/;"	m	class:server 	typeref:typename:int
-my_grid_index	systemc/navigation/environment.cpp	/^int environment :: my_grid_index(int robot_index) {$/;"	f	class:environment	typeref:typename:int
-node_list_data	systemc/navigation/server.cpp	/^int server :: node_list_data[50][50] =$/;"	m	class:server 	typeref:typename:int[50][50]
-node_ordering	systemc/navigation/server.cpp	/^int server :: node_ordering[50][50] =$/;"	m	class:server 	typeref:typename:int[50][50]
-packets_received	systemc/gaze/server.cpp	/^int server :: packets_received[MAX_GAZE_PACKET_AMT][MAX_GAZE_PACKET_SIZE][3];$/;"	m	class:server 	typeref:typename:int[][][3]
-path_fin	systemc/navigation/environment.cpp	/^bool environment :: path_fin[NUM_ROBOTS] = {false, false, false, false};$/;"	m	class:environment 	typeref:typename:bool[]
-percolate_new_image	systemc/gaze/mobile.cpp	/^void mobile :: percolate_new_image(int mobile_index) {$/;"	f	class:mobile	typeref:typename:void
-prc	systemc/cpu/alu.cpp	/^void alu :: prc() {$/;"	f	class:alu	typeref:typename:void
-prc	systemc/cpu/dm.cpp	/^void data_memory :: prc() {$/;"	f	class:data_memory	typeref:typename:void
-prc	systemc/cpu/pm.cpp	/^void program_memory :: prc() {$/;"	f	class:program_memory	typeref:typename:void
-prc	systemc/navigation/environment.cpp	/^void environment :: prc() {$/;"	f	class:environment	typeref:typename:void
-prc	systemc/navigation/robot.cpp	/^void robot :: prc() {$/;"	f	class:robot	typeref:typename:void
-prc	systemc/navigation/server.cpp	/^void server :: prc() {$/;"	f	class:server	typeref:typename:void
-prc_counter1	systemc/two_counters/counter1.cpp	/^void counter1 :: prc_counter1() {$/;"	f	class:counter1	typeref:typename:void
-prc_counter2	systemc/two_counters/counter2.cpp	/^void counter2 :: prc_counter2() {$/;"	f	class:counter2	typeref:typename:void
-prc_driver	systemc/adder/driver.cpp	/^void driver :: prc_driver() {$/;"	f	class:driver	typeref:typename:void
-prc_driver	systemc/adder/monitor.cpp	/^void monitor :: prc_driver() {$/;"	f	class:monitor	typeref:typename:void
-prc_driver	systemc/two_counters/driver.cpp	/^void driver :: prc_driver() {$/;"	f	class:driver	typeref:typename:void
-prc_ended_determiner	systemc/two_counters/ended_determiner.cpp	/^void ended_determiner :: prc_ended_determiner() {$/;"	f	class:ended_determiner	typeref:typename:void
 prc_half_adder	sc_main.cpp	/^void half_adder :: prc_half_adder() { $/;"	f	class:half_adder	typeref:typename:void
-prc_half_adder	systemc/adder/half_adder.cpp	/^void half_adder :: prc_half_adder() { $/;"	f	class:half_adder	typeref:typename:void
-prc_hold_determiner	systemc/two_counters/ended_determiner.cpp	/^void ended_determiner :: prc_hold_determiner() {$/;"	f	class:ended_determiner	typeref:typename:void
-prc_or	systemc/adder/full_adder.cpp	/^void full_adder :: prc_or() { \/\/or process of full adder (others are abstracted)$/;"	f	class:full_adder	typeref:typename:void
-prc_output	systemc/communications/packet_receiver.cpp	/^void packet_receiver :: prc_output() { \/\/comb. -- deals with outp$/;"	f	class:packet_receiver	typeref:typename:void
-prc_output	systemc/seq_det/sdet.cpp	/^void sdet :: prc_output() {$/;"	f	class:sdet	typeref:typename:void
-prc_packet_receiver	systemc/communications/packet_receiver.cpp	/^void packet_receiver :: prc_packet_receiver() { \/\/synch. -- deals with vars$/;"	f	class:packet_receiver	typeref:typename:void
-prc_pipeline	systemc/cpu/controller.cpp	/^void controller :: prc_pipeline() {$/;"	f	class:controller	typeref:typename:void
-prc_read	systemc/cpu/rf.cpp	/^void register_file :: prc_read() {$/;"	f	class:register_file	typeref:typename:void
-prc_rx	systemc/gaze/mobile.cpp	/^void mobile :: prc_rx() {$/;"	f	class:mobile	typeref:typename:void
-prc_rx	systemc/gaze/server.cpp	/^void server :: prc_rx() {$/;"	f	class:server	typeref:typename:void
-prc_sdet	systemc/seq_det/sdet.cpp	/^void sdet :: prc_sdet() {$/;"	f	class:sdet	typeref:typename:void
-prc_tx	systemc/gaze/server.cpp	/^void server :: prc_tx() {$/;"	f	class:server	typeref:typename:void
-prc_write	systemc/cpu/rf.cpp	/^void register_file :: prc_write() {$/;"	f	class:register_file	typeref:typename:void
 re	Makefile	/^re: clean fclean $($NAME)                                                                     $/;"	t
-receive_image_packet	systemc/gaze/mobile.cpp	/^void mobile :: receive_image_packet(int mobile_index, int image_packet[4]) {$/;"	f	class:mobile	typeref:typename:void
-receive_message	systemc/navigation/environment.cpp	/^void environment :: receive_message(int m) {$/;"	f	class:environment	typeref:typename:void
-receive_message	systemc/navigation/robot.cpp	/^void robot :: receive_message(int robot_index, int m) {$/;"	f	class:robot	typeref:typename:void
-receive_message	systemc/navigation/server.cpp	/^void server :: receive_message(int robot_index, int m) {$/;"	f	class:server	typeref:typename:void
-receive_tuple_packet	systemc/gaze/server.cpp	/^void server :: receive_tuple_packet(int mobile_index,$/;"	f	class:server	typeref:typename:void
-robot_speed	systemc/navigation/environment.cpp	/^double environment :: robot_speed[NUM_ROBOTS] = {0, 0, 0, 0};$/;"	m	class:environment 	typeref:typename:double[]
-robot_status	systemc/navigation/server.cpp	/^int server :: robot_status[50][50] =$/;"	m	class:server 	typeref:typename:int[50][50]
-robotx	systemc/navigation/environment.cpp	/^double environment :: robotx[NUM_ROBOTS] = {};$/;"	m	class:environment 	typeref:typename:double[]
-roboty	systemc/navigation/environment.cpp	/^double environment :: roboty[NUM_ROBOTS] = {};$/;"	m	class:environment 	typeref:typename:double[]
-sc_main	systemc/adder/main.cpp	/^int sc_main(int argc, char* argv[]) {$/;"	f	typeref:typename:int
-sc_main	systemc/communications/main.cpp	/^int sc_main(int argc, char* argv[]) {$/;"	f	typeref:typename:int
-sc_main	systemc/cpu/main.cpp	/^int sc_main(int argc, char* argv[]) {$/;"	f	typeref:typename:int
-sc_main	systemc/gaze/main.cpp	/^int sc_main(int argc, char* argv[]) {$/;"	f	typeref:typename:int
-sc_main	systemc/misc/hello_world/hello.cpp	/^int sc_main(int argc, char* argv[]) {$/;"	f	typeref:typename:int
-sc_main	systemc/navigation/main.cpp	/^int sc_main(int argc, char* argv[]) {$/;"	f	typeref:typename:int
-sc_main	systemc/seq_det/main.cpp	/^int sc_main(int argc, char* argv[]) {$/;"	f	typeref:typename:int
-sc_main	systemc/two_counters/main.cpp	/^int sc_main(int argc, char* argv[]) {$/;"	f	typeref:typename:int
-send_message	systemc/navigation/robot.cpp	/^void robot :: send_message(int robot_index, int m) {$/;"	f	class:robot	typeref:typename:void
-send_message	systemc/navigation/server.cpp	/^void server :: send_message(int robot_index, int m) {$/;"	f	class:server	typeref:typename:void
-seq_det	systemc/README.md	/^## seq_det$/;"	s
-set_current_grid_human	systemc/navigation/environment.cpp	/^void environment :: set_current_grid_human(int human_index, int grid_index) {$/;"	f	class:environment	typeref:typename:void
-set_current_grid_robot	systemc/navigation/server.cpp	/^void server :: set_current_grid_robot(int robot_index, int new_current_grid) {$/;"	f	class:server	typeref:typename:void
-set_current_node_robot	systemc/navigation/server.cpp	/^void server :: set_current_node_robot(int robot_index, int new_current_node) {$/;"	f	class:server	typeref:typename:void
-set_robot_status	systemc/navigation/server.cpp	/^void server :: set_robot_status(int robot_index, int status) {$/;"	f	class:server	typeref:typename:void
-start_time	systemc/navigation/environment.cpp	/^double environment :: start_time[NUM_ROBOTS] = {1000, 5000, 7000, 2000}; \/\/[robot_index], in m/;"	m	class:environment 	typeref:typename:double[]
-stop_state	systemc/navigation/environment.cpp	/^int environment :: stop_state[NUM_ROBOTS] = {};$/;"	m	class:environment 	typeref:typename:int[]
-systemc	systemc/README.md	/^# systemc$/;"	c
-two_counters	systemc/README.md	/^## two_counters$/;"	s
-ufo	systemc/gaze/mobile.cpp	/^void mobile :: ufo() {$/;"	f	class:mobile	typeref:typename:void
+s:l	ASCMx128.vim	/^let s:l = 1 - ((0 * winheight(0) + 50) \/ 101)$/;"	v
+s:so_save	ASCMx128.vim	/^let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0$/;"	v
+s:sx	ASCMx128.vim	/^let s:sx = expand("<sfile>:p:r")."x.vim"$/;"	v
+s:wipebuf	ASCMx128.vim	/^  let s:wipebuf = bufnr('%')$/;"	v
+vi	Makefile	/^vi:$/;"	t

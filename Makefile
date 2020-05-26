@@ -7,6 +7,10 @@ INCLUDE_DIR		= ./
 CFLAGS			= -I$(INCLUDE_DIR) -Weverything -lsystemc
 MAIN			= sc_main.cpp
 RM				= rm -rf
+SESSION_FILE    = $(NAME).vim
+
+vi:
+	nvim -S $(SESSION_FILE)
 
 $(NAME): 		$(OBJS)
 	$(GXX) $(CFLAGS) $(MAIN) -o $@
